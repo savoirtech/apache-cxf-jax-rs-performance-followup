@@ -1,4 +1,4 @@
-# Apache CXF SOAP Performance Follow Up
+# Apache CXF JAX-RS Performance Follow Up
 
 In our last
 [post](https://github.com/savoirtech/apache-cxf-jax-rs-performance), we
