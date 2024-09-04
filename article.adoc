@@ -44,18 +44,30 @@ Overall AVG. response time: 0.9153229892552811 (ms)
 ============================================
 ----
 
-That's ?? invocations in eight hours.
+That's 1,510,322,517 calls in eight hours.
 
 == Can you try Java 21 again with Java 17's Heap & Tuning?
 
 Sure!
 
-This resulted in:
+48 clients resulted in:
 [,bash,linenum]
 ----
-=============Overall Test Result============
+jakarta.ws.rs.ProcessingException: java.net.ConnectException: ConnectException invoking http://192.168.50.154:9000/customerservice/customers/123: Cannot assign requested address
+----
 
-============================================
+Reducing clients to 32, we observe:
+[,bash,linenum]
+----
+jakarta.ws.rs.ProcessingException: java.net.ConnectException: ConnectException invoking http://192.168.50.154:9000/customerservice/customers/123: Cannot assign requested address
+----
+
+Yikes...
+
+Let's try 16 clients?
+[,bash,linenum]
+----
+
 ----
 
 === How does that compare to our last Java 21 test?
