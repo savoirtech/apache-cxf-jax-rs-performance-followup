@@ -217,11 +217,19 @@ Total: 758
 TCP:   24475 (estab 45, closed 24416, orphaned 0, timewait 24415)
 ----
 
+Results in:
+
 [,bash,linenum]
 ----
 =============Overall Test Result============
-Overall Throughput: get ??? (invocations/sec)
-Overall AVG. response time: ??? (ms)
-??? (invocations), running ??? (sec)
+Overall Throughput: get 930.9631949741151 (invocations/sec)
+Overall AVG. response time: 1.0741563204631353 (ms)
+1.287000102E9 (invocations), running 1382439.294 (sec)
 ============================================
 ----
+
+1,287,000,102 calls in eight-hours.
+
+This is lower than our original Java 17 run - so lets run this again using Java 17 client (Java 21 server side) and our new network stack setting.
+
+
