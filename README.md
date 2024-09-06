@@ -131,7 +131,7 @@ OpenJDK and OpenJ9 implementations exhibit the same behavoir.
 
 Notes: tcp_tw_reuse allows sockets in the "time-wait" state to be reused
 for new connections. By default, this is usually set to 0 (off), on our
-PPC64LE CentOS Stream 9 system its set to value 2 meaning enable for
+x64 Ubuntu 22.04 LTS system its set to value 2 meaning enable for
 loopback traffic only.
 
 When we tested with net.ipv4.tcp_tw_reuse set to 1, the clients did not
