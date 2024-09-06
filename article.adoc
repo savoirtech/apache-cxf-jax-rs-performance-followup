@@ -166,7 +166,7 @@ OpenJDK and OpenJ9 implementations exhibit the same behavoir.
 
 === Lets tune the networking stack to see if we can support more clients.
 
-cols("1","1","1","1")]
+[cols("1","1","1","1")]
 |===
 ^| Sysctl Parameter ^| Default Value ^| Tested Value ^| Result
 

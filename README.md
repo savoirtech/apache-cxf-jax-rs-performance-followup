@@ -122,8 +122,6 @@ OpenJDK and OpenJ9 implementations exhibit the same behavoir.
 
 ## Lets tune the networking stack to see if we can support more clients.
 
-cols("1","1","1","1")\]
-
 | Sysctl Parameter | Default Value | Tested Value | Result |
 |----|----|----|----|
 | net.ipv4.tcp_congestion_control | reno | cubic | No change to runtime behavoir in test case. |
