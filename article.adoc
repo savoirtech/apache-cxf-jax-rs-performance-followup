@@ -1,6 +1,6 @@
 == Apache CXF JAX-RS Performance Follow Up
 
-In our last https://github.com/savoirtech/apache-cxf-jax-rs-performance[post], we recounted our journey to processing ~1.6 Billion JAX-RS calls in an eight-hour period. This lead to several readers reaching out with suggestions for tweaks to the scenarios run, or entirely new configurations. In this post we seek to provide some answers.
+In our last https://github.com/savoirtech/apache-cxf-jax-rs-performance[post], we recounted our journey to processing ~1.5 Billion JAX-RS calls in an eight-hour period. This lead to several readers reaching out with suggestions for tweaks to the scenarios run, or entirely new configurations. In this post we seek to provide some answers.
 
 image::./assets/images/CXFLab.png[alt=CXFLab,width=480,height=640,align="center"]
 
@@ -244,6 +244,27 @@ Overall AVG. response time: 0.9292784345665162 (ms)
 ----
 
 1,487,645,195 is slightly less than the 1,510,322,517 calls our first testing run made (Java 17 Client and Server).
+
+==== Java 17 retest with tuning:
+
+Given our tuning changes, we retest Java 17 on Client and Server side.
+
+[,bash,linenum]
+----
+=============Overall Test Result============
+Overall Throughput: get 1090.3039774065207 (invocations/sec)
+Overall AVG. response time: 0.9171754122906856 (ms)
+1.507275864E9 (invocations), running 1382436.3619999993 (sec)
+============================================
+----
+
+This test run resulted in 1,507,275,864 calls in eight-hours.
+
+== Conclusions
+
+A direct update to Java 21 in our testing scenario results in lower throughput and stability issues. With careful tuning, we can get runtime through put closer to that of our out-of-the-box Java 17.
+
+If you update your deployment to Java 21, please review your logs for instances of `ProcessingException: java.net.ConnectException`, and if found check your socket statistic (`ss -s`) for ephemeral port contention. The key behavior to check is `TIME-WAIT`, allowing for immediate reuse can greatly improve throughput BUT must be carefully vetted with your administrators before implementing.
 
 == About the Authors
 
