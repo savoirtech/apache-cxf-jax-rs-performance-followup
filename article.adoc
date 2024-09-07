@@ -78,7 +78,7 @@ Just 79,699,786 calls in eight-hours.
 
 === How does that compare to our last Java 21 test?
 
-In our prior lab test we achieved 1,510,322,517 calls in eight-hours, this run provided 79,699,786 - a delta improvement of 1,430,622,731 invocations.
+In our prior lab test we achieved 1,510,322,517 calls in eight-hours, this run provided 79,699,786 - a delta improvement of negative 1,430,622,731 invocations :S
 
 Something has to be seriously wrong.
 
