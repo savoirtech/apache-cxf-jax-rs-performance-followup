@@ -232,4 +232,29 @@ Overall AVG. response time: 1.0741563204631353 (ms)
 
 This is lower than our original Java 17 run - so lets run this again using Java 17 client (Java 21 server side) and our new network stack setting.
 
+Running the Java 17 Client, we observe:
 
+[,bash,linenum]
+----
+=============Overall Test Result============
+Overall Throughput: get 1076.1037411424204 (invocations/sec)
+Overall AVG. response time: 0.9292784345665162 (ms)
+1.487645195E9 (invocations), running 1382436.5979999998 (sec)
+============================================
+----
+
+1,487,645,195 is slightly less than the 1,510,322,517 calls our first testing run made (Java 17 Client and Server).
+
+== About the Authors
+
+link:https://github.com/savoirtech/blogs/blob/main/authors/JamieGoodyear.md[Jamie Goodyear]
+
+== Reaching Out
+
+Please do not hesitate to reach out with questions and comments, here on the Blog, or through the Savoir Technologies website at https://www.savoirtech.com.
+
+== With Thanks
+
+Thank you to the Apache CXF community.
+
+(c) 2024 Savoir Technologies
