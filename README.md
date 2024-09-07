@@ -205,7 +205,7 @@ This test run resulted in 1,507,275,864 calls in eight-hours.
 
 A direct update to Java 21 in our testing scenario results in lower
 throughput and stability issues. With careful tuning, we can get runtime
-through put closer to that of our out-of-the-box Java 17.
+throughput closer to that of our out-of-the-box Java 17.
 
 If you update your deployment to Java 21, please review your logs for
 instances of `ProcessingException: java.net.ConnectException`, and if
