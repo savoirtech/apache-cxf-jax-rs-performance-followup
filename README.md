@@ -5,7 +5,8 @@ In our last
 recounted our journey to processing ~1.5 Billion JAX-RS calls in an
 eight-hour period. This lead to several readers reaching out with
 suggestions for tweaks to the scenarios run, or entirely new
-configurations. In this post we seek to provide some answers.
+configurations. In this post we seek to provide some answers -
+particularly on Java 21 runtime.
 
 <figure>
 <img src="./assets/images/CXFLab.png" alt="CXFLab" />
